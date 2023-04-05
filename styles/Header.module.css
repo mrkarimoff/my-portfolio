@@ -1,0 +1,45 @@
+.header {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 30px;
+  padding-inline: 20px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 11;
+}
+
+.headshot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s all linear;
+}
+
+.name {
+  color: var(--font-color2);
+  letter-spacing: 1px;
+}
+
+.headshot:hover .name {
+  color: #fff;
+}
+
+.hamburger {
+  all: unset;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1115px) {
+  .header {
+    display: flex;
+  }
+}

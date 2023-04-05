@@ -1,0 +1,172 @@
+.body {
+  position: fixed;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  transition: 0.5s all ease-in-out;
+  z-index: 9;
+}
+
+.profile {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  transition: 0.1s all linear;
+}
+
+.img {
+  border: 7px solid #2c2f3f;
+  border-radius: 50%;
+}
+
+.img:hover {
+  border: 7px solid var(--main-color);
+}
+
+.name {
+  margin-top: 15px;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  font-weight: 600;
+  color: var(--font-color2);
+}
+
+.name:hover {
+  color: #fff;
+}
+
+.socialContainer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transform: scale(1);
+  background-color: #212431;
+  cursor: pointer;
+  transition: 0.1s all linear;
+}
+
+.social:hover {
+  background-color: var(--main-color);
+  transform: scale(1.2);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.linkContainer {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 3px;
+}
+
+.linkContainer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  margin-bottom: -3px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.linkContainer:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.link {
+  color: var(--font-color2);
+}
+
+.linkContainer a,
+.icon {
+  color: var(--font-color2);
+}
+
+.linkContainer:hover .icon {
+  color: var(--main-color);
+}
+
+.linkContainer:hover .link {
+  color: #fff;
+}
+
+.linkFocused {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 3px;
+}
+
+.linkFocused a,
+.icon {
+  color: var(--font-color2);
+}
+
+.linkFocused .icon {
+  color: var(--main-color);
+}
+
+.linkFocused .link {
+  color: #fff;
+}
+
+.linkFocused::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: -3px;
+}
+
+.bodyShow {
+  position: fixed;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  transition: 0.5s all ease-in-out;
+  z-index: 9;
+}
+
+@media screen and (max-width: 1115px) {
+  .body {
+    left: -1200px;
+  }
+}
