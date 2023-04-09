@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const initialState = {
   openDrawer: false,
+  activeIndex: 0,
 };
 
 const generalReducer = createSlice({

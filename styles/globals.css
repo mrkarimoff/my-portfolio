@@ -47,7 +47,7 @@ section {
 }
 
 body {
-  background-color: #777;
+  background-color: #0a192f;
 }
 
 ul {
@@ -82,7 +82,7 @@ ul {
   top: 0;
   right: 0;
   height: 100%;
-  width: 8px;
+  width: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   overflow: hidden;
