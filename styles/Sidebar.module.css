@@ -5,7 +5,7 @@
   height: 100vh;
   background-color: var(--sidebar-bg);
   padding: 20px;
-  transition: 0.5s all ease-in-out;
+  transition: 0.5s all linear;
   z-index: 9;
 }
 
@@ -61,6 +61,12 @@
 .social:hover {
   background-color: var(--main-color);
   transform: scale(1.2);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation {
@@ -161,8 +167,20 @@
   height: 100vh;
   background-color: var(--sidebar-bg);
   padding: 20px;
-  transition: 0.5s all ease-in-out;
+  transition: 0.5s all linear;
   z-index: 9;
+}
+
+.email {
+  all: unset;
+  margin-top: 8px;
+  padding-inline: 20px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.email:hover {
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 1115px) {

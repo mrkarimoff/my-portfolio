@@ -1,16 +1,19 @@
+.container {
+  padding-inline: 20px;
+}
+
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px dashed var(--main-color);
-  width: fit-content;
-  padding-bottom: 2px;
-  position: absolute;
-  left: 30px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .title:hover {
   color: var(--secondary-color);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
 }

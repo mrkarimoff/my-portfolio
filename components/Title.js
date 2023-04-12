@@ -5,9 +5,17 @@ import { motion } from "framer-motion";
 
 function Title({ children }) {
   return (
-    <motion.div initial={"hidden"} whileInView={"visible"} variants={title}>
-      <h2 className={styles.title}>{children}</h2>
-    </motion.div>
+    <div className={styles.container}>
+      <motion.h2
+        initial={"hidden"}
+        whileInView={"visible"}
+        variants={title}
+        className={styles.title}
+      >
+        {children}
+      </motion.h2>
+      <div className={styles.line} />
+    </div>
   );
 }
 

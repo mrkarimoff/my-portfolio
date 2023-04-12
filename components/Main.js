@@ -1,19 +1,19 @@
 import { toggleDrawer, updateState } from "@/redux/reducers/general.reducer";
+import { getActiveIndex } from "@/redux/reducers/general.selector";
 import styles from "@/styles/Main.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { IoArrowUpOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { Keyboard, Mousewheel, Scrollbar, Parallax } from "swiper";
+import { Keyboard, Mousewheel, Parallax, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Home from "./Sections/Home";
-import Sidebar from "./Sidebar";
 import About from "./Sections/About";
-import Resume from "./Sections/Resume";
-import Portfolio from "./Sections/Portfolio";
 import Contact from "./Sections/Contact";
-import { getActiveIndex } from "@/redux/reducers/general.selector";
+import Home from "./Sections/Home";
+import Portfolio from "./Sections/Portfolio";
+import Skills from "./Sections/Skills";
+import Sidebar from "./Sidebar";
 
 function Main() {
   const activeIndex = useSelector(getActiveIndex());
@@ -57,7 +57,7 @@ function Main() {
           <About />
         </SwiperSlide>
         <SwiperSlide className={styles.section}>
-          <Resume />
+          <Skills />
         </SwiperSlide>
         <SwiperSlide className={styles.section}>
           <Portfolio />

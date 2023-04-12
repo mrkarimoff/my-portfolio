@@ -17,8 +17,7 @@ function Home({ handleNavigationClick }) {
       </div>
       <motion.div
         initial={"hidden"}
-        whileInView={"visible"}
-        viewport={{ once: true }}
+        animate={"visible"}
         variants={container}
         className={styles.content}
       >

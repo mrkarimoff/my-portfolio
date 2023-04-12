@@ -2,12 +2,12 @@ import React from "react";
 import styles from "@/styles/Resume.module.css";
 import Title from "@/components/Title";
 
-function Resume() {
+function Skills() {
   return (
     <div className={styles.container}>
-      <Title>Resume</Title>
+      <Title>Skills</Title>
     </div>
   );
 }
 
-export default Resume;
+export default Skills;
