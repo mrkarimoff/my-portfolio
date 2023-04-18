@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { sidebar } from "@/animations/motions";
+import { sidebar } from "@/utils/motions";
 import SocialLinks from "./SocialLinks";
 import Navigations from "./Navigations";
 
@@ -34,7 +34,7 @@ function Sidebar({ activeIndex, handleNavigationClick }) {
         <h2 className={styles.name}>Mirfayz Karimov</h2>
       </a>
       <SocialLinks />
-      <Navigations activeIndex={activeIndex} />
+      <Navigations activeIndex={activeIndex} handleNavigationClick={handleNavigationClick} />
       <button
         className={styles.email}
         onClick={() => router.push(`mailto:mirfayzkarimoff@gmail.com`)}

@@ -3,7 +3,7 @@ import styles from "@/styles/About.module.css";
 import Title from "@/components/Title";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { mainImg, resumeBtn, textAnim } from "@/animations/motions";
+import { mainImg, resumeBtn, textAnim } from "@/utils/motions";
 
 function About() {
   const downloadResume = () =>
@@ -40,7 +40,7 @@ function About() {
           variants={mainImg}
           className={styles.right}
         >
-          <Image className={styles.img} src={"/me2.jpg"} fill alt="mainImg" />
+          <Image sizes="300" className={styles.img} src={"/me2.jpg"} fill alt="mainImg" />
         </motion.div>
       </div>
 

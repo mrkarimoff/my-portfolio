@@ -1,0 +1,58 @@
+.ul {
+  display: flex;
+  margin-top: 20px;
+  padding-inline: 20px;
+}
+
+.tab {
+  text-align: center;
+  flex: 1 1;
+  cursor: pointer;
+  color: var(--font-color2);
+  padding: 10px;
+  position: relative;
+}
+
+.selectedTab {
+  text-align: center;
+  flex: 1 1;
+  cursor: pointer;
+  background-color: #149ddd1f;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.content {
+  margin-top: 70px;
+  margin-inline: 40px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 787px) {
+  .content {
+    margin-top: 70px;
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content {
+    margin-top: 45px;
+    gap: 20px;
+  }
+}

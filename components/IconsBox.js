@@ -5,7 +5,7 @@ import { SiTypescript } from "react-icons/si";
 import { motion } from "framer-motion";
 import styles from "@/styles/IconsBox.module.css";
 import Image from "next/image";
-import { icon, iconNode } from "@/animations/motions";
+import { icon, iconNode } from "@/utils/motions";
 
 function IconsBox() {
   return (

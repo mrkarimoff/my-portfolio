@@ -1,4 +1,4 @@
-import { container } from "@/animations/motions";
+import { container } from "@/utils/motions";
 import styles from "@/styles/Home.module.css";
 import { motion } from "framer-motion";
 import Image from "next/image";

@@ -1,4 +1,4 @@
-import { title } from "@/animations/motions";
+import { title } from "@/utils/motions";
 import React from "react";
 import styles from "@/styles/Title.module.css";
 import { motion } from "framer-motion";

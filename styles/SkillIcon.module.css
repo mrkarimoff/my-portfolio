@@ -1,0 +1,35 @@
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.iconWrapper:hover {
+  color: var(--hover-color);
+}
+
+.icon {
+  font-size: 65px;
+}
+
+@media screen and (max-width: 787px) {
+  .icon {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .icon {
+    font-size: 35px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+}

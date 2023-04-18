@@ -3,7 +3,7 @@ import { FiHome, FiMessageCircle, FiUser } from "react-icons/fi";
 import { TbTools } from "react-icons/tb";
 import styles from "@/styles/Sidebar.module.css";
 
-function Navigations({ activeIndex }) {
+function Navigations({ activeIndex, handleNavigationClick }) {
   return (
     <ul className={styles.navigation}>
       <li>
