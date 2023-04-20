@@ -4,7 +4,7 @@ import { backendIcons, frontendIcons } from "@/utils/skill_icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-export default function App() {
+export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const tabs = [

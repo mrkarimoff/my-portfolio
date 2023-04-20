@@ -1,3 +1,90 @@
 .container {
   padding-top: 30px;
 }
+
+.swiperSlide {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+.swiperSlide::after,
+.swiperSlide::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 2s;
+}
+
+.swiperSlide::after {
+  top: -4px;
+  left: -4px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.swiperSlide::before {
+  bottom: -4px;
+  right: -4px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.swiperSlide.activeSlide::after,
+.swiperSlide.activeSlide::before {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-color: var(--main-color);
+}
+
+.swiperSlide img {
+  display: block;
+  width: 100%;
+}
+
+.portfolioSwiper {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .swiperSlide {
+    width: 300px;
+    height: 300px;
+  }
+
+  .portfolioSwiper {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .swiperSlide {
+    width: 250px;
+    height: 250px;
+  }
+
+  .portfolioSwiper {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .swiperSlide {
+    width: 250px;
+    height: 250px;
+  }
+
+  .portfolioSwiper {
+    padding-top: 150px;
+  }
+}

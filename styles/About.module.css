@@ -69,6 +69,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 25px;
   }
 
   .left {
@@ -103,6 +104,11 @@
 }
 
 @media screen and (max-width: 558px) {
+  .content {
+    margin-top: 40px;
+    gap: 25px;
+  }
+
   .right {
     width: 250px;
     height: 250px;

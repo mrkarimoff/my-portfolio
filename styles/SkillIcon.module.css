@@ -15,6 +15,10 @@
 }
 
 @media screen and (max-width: 787px) {
+  .iconWrapper {
+    gap: 12px;
+  }
+
   .icon {
     font-size: 50px;
   }
@@ -26,7 +30,7 @@
 
 @media screen and (max-width: 540px) {
   .icon {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .title {
