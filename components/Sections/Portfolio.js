@@ -1,24 +1,27 @@
+import Card from "@/components/Card";
 import Title from "@/components/Title";
 import styles from "@/styles/Portfolio.module.css";
+import projects from "@/utils/constants";
 import { useRef, useState } from "react";
 import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Overlay from "@/components/Overlay";
 
+import "swiper/css/autoplay";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { updateState } from "@/redux/reducers/general.reducer";
+import { useDispatch } from "react-redux";
 
-function Portfolio() {
+function Portfolio({ setOpenModal }) {
+  const dispatch = useDispatch();
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
-  };
-
-  const sayHello = () => {
-    console.log("Salomlar");
   };
 
   return (
@@ -27,13 +30,12 @@ function Portfolio() {
 
       <Swiper
         ref={swiperRef}
-        loop
         effect={"coverflow"}
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 40,
-          stretch: 10,
+          rotate: 30,
+          stretch: 0,
           depth: 100,
           modifier: 1,
           slideShadows: true,
@@ -42,7 +44,7 @@ function Portfolio() {
           clickable: true,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 3200,
           disableOnInteraction: false,
         }}
         navigation={true}
@@ -50,42 +52,18 @@ function Portfolio() {
         className={styles.portfolioSwiper}
         onSlideChange={handleSlideChange}
       >
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 0 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 1 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 2 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 3 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 4 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={sayHello}
-          className={`${styles.swiperSlide} ${activeIndex === 5 && styles.activeSlide}`}
-        >
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
+        {projects.map((item, index) => (
+          <SwiperSlide
+            onClick={() => {
+              setOpenModal(true);
+              dispatch(updateState({ state: "currentCard", setState: item }));
+            }}
+            key={item.id}
+            className={`${styles.swiperSlide} ${activeIndex === index && styles.activeSlide}`}
+          >
+            <Card data={item} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

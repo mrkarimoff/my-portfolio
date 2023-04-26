@@ -1,0 +1,54 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a192fde;
+  z-index: 9999;
+  display: flex;
+}
+
+.overlay::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50%;
+}
+
+.overlay::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.overlay::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  height: 10px;
+}
+
+@media only screen {
+  .overlay {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .overlay {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .overlay {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .overlay {
+    padding: 20px;
+  }
+}

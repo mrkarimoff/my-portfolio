@@ -15,7 +15,7 @@ import Portfolio from "./Sections/Portfolio";
 import Skills from "./Sections/Skills";
 import Sidebar from "./Sidebar";
 
-function Main() {
+function Main({ setOpenModal }) {
   const activeIndex = useSelector(getActiveIndex());
   const swiperRef = useRef(null);
   const dispatch = useDispatch();
@@ -60,7 +60,7 @@ function Main() {
           <Skills />
         </SwiperSlide>
         <SwiperSlide className={styles.section}>
-          <Portfolio />
+          <Portfolio setOpenModal={setOpenModal} />
         </SwiperSlide>
         <SwiperSlide className={styles.section}>
           <Contact />

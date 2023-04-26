@@ -19,6 +19,7 @@
 .img {
   border: 7px solid #2c2f3f;
   border-radius: 50%;
+  transition: 0.3s all ease;
 }
 
 .img:hover {

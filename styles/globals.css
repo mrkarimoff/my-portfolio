@@ -10,6 +10,7 @@
 
 :root {
   --main-color: #149ddd;
+  --site-bg: #0a192f;
   --main-bg: #ecf0f3;
   --secondary-color: #ff014f;
   --sidebar-bg: #040b14;
@@ -47,7 +48,7 @@ section {
 }
 
 body {
-  background-color: #0a192f;
+  background-color: var(--site-bg);
 }
 
 ul {

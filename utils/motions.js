@@ -72,3 +72,35 @@ export const tabContent = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.2 } },
   exit: { y: -10, opacity: 0 },
 };
+
+// Card motion
+export const card = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 1 } },
+};
+
+// Overlay & Modal motions
+export const overlay = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+export const modal = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.5, delayChildren: 0.2 } },
+};
+
+export const imageVariants = {
+  hidden: { opacity: 0, y: "-10vh" },
+  visible: { opacity: 1, y: "0vh" },
+};
+
+export const content = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+};
+
+export const text = {
+  hidden: { opacity: 0, x: "10%" },
+  visible: { opacity: 1, x: 0 },
+};
