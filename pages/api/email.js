@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "https://my-portfolio-mrkarimoff.vercel.app");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
   if (req.method !== "POST") return res.status(405).send({ message: "Only POST requests allowed" });
 
   const { name, email, message } = req.body;
