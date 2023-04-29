@@ -69,10 +69,12 @@ function Modal({ data, close }) {
             <span>View Project</span>
             <RxOpenInNewWindow className={styles.sourceIcon} />
           </Link>
-          <Link href={code_base} target="_blank" className={`${styles.sourceBtn} ${styles.code}`}>
-            <span>Code</span>
-            <CgCodeSlash className={styles.sourceIcon} />
-          </Link>
+          {code_base && (
+            <Link href={code_base} target="_blank" className={`${styles.sourceBtn} ${styles.code}`}>
+              <span>Code</span>
+              <CgCodeSlash className={styles.sourceIcon} />
+            </Link>
+          )}
         </motion.div>
       </motion.div>
     </motion.div>

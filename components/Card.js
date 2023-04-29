@@ -17,11 +17,7 @@ function Card({ data }) {
           <Image sizes="400" className={styles.img} fill src={data.img} alt={data.name} />
         </motion.div>
         <h4 className={styles.name}>{data.name}</h4>
-        <p className={styles.description}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi doloribus architecto
-          aperiam, hic quibusdam est minima cumque natus ipsam a odit tempora, laborum veniam
-          voluptates!
-        </p>
+        <p className={styles.description}>{data.description}</p>
       </motion.div>
     </>
   );
