@@ -1,4 +1,3 @@
-import Sib from "sib-api-v3-sdk";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -7,7 +6,13 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "https://my-portfolio-mrkarimoff.vercel.app");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
-  if (req.method !== "POST") return res.status(405).send({ message: "Only POST requests allowed" });
+  if (req.method === "OPTIONS") {
+    // Handle preflight request
+    return res.status(200).end();
+  }
+  if (req.method !== "POST") {
+    return res.status(405).send({ message: "Only POST requests allowed" });
+  }
 
   const { name, email, message } = req.body;
   const client = Sib.ApiClient.instance;
