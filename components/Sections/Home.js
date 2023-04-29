@@ -23,7 +23,7 @@ function Home({ handleNavigationClick }) {
       >
         <motion.div className={styles.name}>Mirfayz Karimov</motion.div>
         <motion.h1 className={styles.occupation}>
-          I'm a{" "}
+          I&apos;m a{" "}
           <span className={styles.typeEffect}>
             <Typewriter
               words={["Web Developer.", "MERN Stack Developer.", "Freelancer."]}

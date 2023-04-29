@@ -22,12 +22,12 @@ function About() {
             viewport={{ once: true }}
             className={styles.text}
           >
-            Hi, I'm Mirfayz Karimov, a MERN stack developer with a focus on Frontend development. I
-            love creating web applications that solve everyday problems, and I'm always curious to
-            learn more when it comes to new technologies and creative coding.
+            Hi, I&apos;m Mirfayz Karimov, a MERN stack developer with a focus on Frontend
+            development. I love creating web applications that solve everyday problems, and I&apos;m
+            always curious to learn more when it comes to new technologies and creative coding.
             <br />
-            <br /> When I'm not coding, you can usually find me watching movies, reading
-            psychological and personal growth books, or exploring new places. Let's connect and
+            <br /> When I&apos;m not coding, you can usually find me watching movies, reading
+            psychological and personal growth books, or exploring new places. Let&apos;s connect and
             create something amazing together!
           </motion.p>
         </div>

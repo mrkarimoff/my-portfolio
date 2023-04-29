@@ -60,7 +60,8 @@ function Contact() {
             </span>
           </h2>
           <p className={styles.text}>
-            Reach out and let's bring your ideas to life! <br />I am available for freelance work.
+            Reach out and let&apos;s bring your ideas to life! <br />I am available for freelance
+            work.
           </p>
           <div className={styles.myEmail}>
             <div className={styles.iconWrapper}>

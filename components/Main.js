@@ -26,7 +26,7 @@ function Main({ setOpenModal }) {
         dispatch(updateState({ state: "activeIndex", setState: e.activeIndex }));
       });
     }
-  }, []);
+  }, [dispatch]);
 
   const handleNavigationClick = (index) => {
     if (swiperRef.current) {
