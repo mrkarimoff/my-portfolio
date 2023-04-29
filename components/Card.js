@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import Image from "next/image";
 import styles from "@/styles/Card.module.css";
-import { motion } from "framer-motion";
 import { card } from "@/utils/motions";
-import Overlay from "./Overlay";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Card({ data }) {
   return (

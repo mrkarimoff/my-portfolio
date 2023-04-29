@@ -6,12 +6,12 @@ import styles from "@/styles/Sidebar.module.css";
 function SocialLinks() {
   return (
     <ul className={styles.socialContainer}>
-      <li className={styles.social}>
+      <li title="Github" className={styles.social}>
         <Link className={styles.socialLink} target="_blank" href={"https://github.com/mrkarimoff"}>
           <FiGithub size={18} />
         </Link>
       </li>
-      <li className={styles.social}>
+      <li title="Instagram" className={styles.social}>
         <Link
           className={styles.socialLink}
           target="_blank"
@@ -20,7 +20,7 @@ function SocialLinks() {
           <FaInstagram size={18} />
         </Link>
       </li>
-      <li className={styles.social}>
+      <li title="Facebook" className={styles.social}>
         <Link
           className={styles.socialLink}
           target="_blank"
@@ -29,7 +29,7 @@ function SocialLinks() {
           <FaFacebookF size={18} />
         </Link>
       </li>
-      <li className={styles.social}>
+      <li title="LinkedIn" className={styles.social}>
         <Link
           className={styles.socialLink}
           target="_blank"
@@ -38,7 +38,7 @@ function SocialLinks() {
           <FaLinkedinIn size={18} />
         </Link>
       </li>
-      <li className={styles.social}>
+      <li title="Skype" className={styles.social}>
         <Link
           className={styles.socialLink}
           target="_blank"

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/Resume.module.css";
+import styles from "@/styles/Skills.module.css";
 import Title from "@/components/Title";
 import Tabs from "@/components/Tabs";
 

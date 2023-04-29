@@ -3,16 +3,7 @@ const projects = [
     id: 32423413,
     name: "My Collections",
     img: "/projects/myCollections.png",
-    stack: [
-      "HTML",
-      "CSS",
-      "React",
-      "TypeScript",
-      "Redux Toolkit",
-      "TypeScript",
-      "TypeScript",
-      "TypeScript",
-    ],
+    stack: ["HTML", "CSS", "React", "TypeScript"],
     url: "https://mycollections-mirfayz.netlify.app",
     code_base: "https://github.com/mrkarimoff/mycollection_frontend",
     description:

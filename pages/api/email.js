@@ -4,7 +4,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default async function handler(req, res) {
-  const { name, email, content } = req.body;
+  if (req.method !== "POST") return res.status(405).send({ message: "Only POST requests allowed" });
+
+  const { name, email, message } = req.body;
   const client = Sib.ApiClient.instance;
   const apiKey = client.authentications["api-key"];
   apiKey.apiKey = process.env.SENDGRID_API_KEY;
@@ -30,7 +32,7 @@ export default async function handler(req, res) {
       textContent: `
     You have a message from ${name}
     Sender: ${email}
-    Message: ${content}
+    Message: ${message}
     `,
     });
     res.status(200).json({ message: "Email sent successfully" });

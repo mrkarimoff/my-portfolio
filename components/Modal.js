@@ -17,11 +17,11 @@ function Modal({ data, close }) {
       <button onClick={close} className={styles.closeBtn}>
         <CgClose className={styles.closeIcon} />
       </button>
-      <motion.div variants={imageVariants} className={styles.imgContainer}>
-        <Link target="_blank" href={url}>
-          <Image fill src={img} className={styles.modalImg} alt={name + id} />
-        </Link>
-      </motion.div>
+
+      <motion.a variants={imageVariants} className={styles.imgContainer} target="_blank" href={url}>
+        <Image sizes="400" fill src={img} className={styles.modalImg} alt={name + id} />
+      </motion.a>
+
       <motion.div variants={content} className={styles.content}>
         <motion.h2 variants={text} className={styles.name}>
           {name}
@@ -32,24 +32,38 @@ function Modal({ data, close }) {
         <motion.span variants={text} className={styles.stackTitle}>
           Project Stack
         </motion.span>
-        <motion.div variants={text} className={styles.stackWrapper}>
-          <ul className={styles.stackContainer}>
-            {leftStack.map((item, i) => (
-              <div className={styles.skill} key={i}>
-                <IoMdArrowDroprightCircle className={styles.arrowIcon} />
-                <li className={styles.stackItem}>{item}</li>
-              </div>
-            ))}
-          </ul>
-          <ul className={styles.stackContainer}>
-            {rightStack.map((item, i) => (
-              <div className={styles.skill} key={i}>
-                <IoMdArrowDroprightCircle className={styles.arrowIcon} />
-                <li className={styles.stackItem}>{item}</li>
-              </div>
-            ))}
-          </ul>
-        </motion.div>
+        {stack.length > 3 ? (
+          <motion.div variants={text} className={styles.stackWrapper}>
+            <ul className={styles.stackContainer}>
+              {leftStack.map((item, i) => (
+                <div className={styles.skill} key={i}>
+                  <IoMdArrowDroprightCircle className={styles.arrowIcon} />
+                  <li className={styles.stackItem}>{item}</li>
+                </div>
+              ))}
+            </ul>
+            <ul className={styles.stackContainer}>
+              {rightStack.map((item, i) => (
+                <div className={styles.skill} key={i}>
+                  <IoMdArrowDroprightCircle className={styles.arrowIcon} />
+                  <li className={styles.stackItem}>{item}</li>
+                </div>
+              ))}
+            </ul>
+          </motion.div>
+        ) : (
+          <motion.div variants={text} className={styles.stackWrapper}>
+            <ul className={styles.stackContainer}>
+              {stack.map((item, i) => (
+                <div className={styles.skill} key={i}>
+                  <IoMdArrowDroprightCircle className={styles.arrowIcon} />
+                  <li className={styles.stackItem}>{item}</li>
+                </div>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+
         <motion.div variants={text} className={styles.btnWrapper}>
           <Link href={url} target="_blank" className={styles.sourceBtn}>
             <span>View Project</span>

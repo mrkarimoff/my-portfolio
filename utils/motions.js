@@ -104,3 +104,13 @@ export const text = {
   hidden: { opacity: 0, x: "10%" },
   visible: { opacity: 1, x: 0 },
 };
+
+// Contact
+export const emoji = {
+  hidden: { scale: 1 },
+  visible: {
+    scale: 1.5,
+    rotate: [30, -30, 90, 0],
+    transition: { type: "keyframes", duration: 0.5, delay: 1 },
+  },
+};

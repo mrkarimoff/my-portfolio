@@ -1,19 +1,18 @@
 import Card from "@/components/Card";
 import Title from "@/components/Title";
+import { updateState } from "@/redux/reducers/general.reducer";
 import styles from "@/styles/Portfolio.module.css";
 import projects from "@/utils/constants";
 import { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Overlay from "@/components/Overlay";
 
-import "swiper/css/autoplay";
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { updateState } from "@/redux/reducers/general.reducer";
-import { useDispatch } from "react-redux";
 
 function Portfolio({ setOpenModal }) {
   const dispatch = useDispatch();

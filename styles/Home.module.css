@@ -59,7 +59,7 @@
 }
 
 .typeEffect {
-  color: var(--secondary-color);
+  color: var(--main-color);
   width: fit-content;
 }
 

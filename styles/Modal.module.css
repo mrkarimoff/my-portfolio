@@ -38,10 +38,10 @@
 }
 
 .imgContainer {
-  width: 100%;
-  /* background-color: red; */
-  height: 450px;
+  display: block;
   position: relative;
+  width: 100%;
+  height: 450px;
 }
 
 .modalImg {
@@ -55,7 +55,6 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  /* background-color: green; */
 }
 
 .name {
@@ -148,7 +147,6 @@
     align-items: center;
     gap: 20px;
     padding: 50px 20px;
-    /* width: 90%; */
   }
 
   .closeBtn {
@@ -158,7 +156,6 @@
 
   .content {
     width: 90%;
-    /* align-items: center; */
   }
 
   .imgContainer {
