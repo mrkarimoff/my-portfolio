@@ -20,7 +20,7 @@ function Contact() {
     e.preventDefault();
     try {
       const data = { name, email, message };
-      await axios.post("http://localhost:3000/api/email", data);
+      await axios.post("https://my-portfolio-mrkarimoff.vercel.app/api/email", data);
       toast.success("Message sent successfully!", {
         position: "top-right",
         autoClose: 2500,
