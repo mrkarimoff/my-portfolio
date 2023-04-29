@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import Sib from "sib-api-v3-sdk";
 
 dotenv.config();
 
