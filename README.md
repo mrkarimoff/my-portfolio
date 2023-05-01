@@ -10,7 +10,7 @@ This is my portfolio website where I showcase my projects, skills, and experienc
 
 ## Demo
 
-You can see the live demo of the website at [https://www.mirfayz.uz/](mirfayz.uz).
+You can see the live demo of the website at [mirfayz.uz](https://www.mirfayz.uz/).
 
 ## Features
 
