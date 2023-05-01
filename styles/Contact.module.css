@@ -194,6 +194,10 @@
 }
 
 @media screen and (max-width: 450px) {
+  .contactWrapper {
+    gap: 15px;
+  }
+
   .text {
     font-size: 0.9rem;
     line-height: unset;

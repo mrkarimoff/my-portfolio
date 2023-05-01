@@ -291,16 +291,15 @@
   }
 
   .description {
-    font-size: 0.6rem;
     line-height: unset;
   }
 
   .stackTitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .stackItem {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   .btnWrapper {
@@ -308,7 +307,7 @@
   }
 
   .sourceBtn {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .sourceIcon {
@@ -322,30 +321,5 @@
 
   .code {
     width: 100px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .imgContainer {
-    height: 220px;
-  }
-
-  .name {
-    font-size: 1rem;
-  }
-
-  .btnWrapper {
-    margin-top: 0px;
-    gap: 8px;
-  }
-
-  .sourceBtn {
-    width: 100px;
-    height: 40px;
-    gap: 6px;
-  }
-
-  .code {
-    width: 80px;
   }
 }

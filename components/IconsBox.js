@@ -18,6 +18,7 @@ function IconsBox() {
       </motion.div>
       <motion.div whileHover={"hover"} variants={icon}>
         <Image
+          priority
           className={styles.nextIcon}
           src={"/next.png"}
           width={60}
