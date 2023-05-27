@@ -4,6 +4,7 @@ import { BsGit, BsGithub } from "react-icons/bs";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import {
   SiCsswizardry,
+  SiTailwindcss,
   SiJavascript,
   SiTypescript,
   SiRedux,
@@ -29,6 +30,7 @@ export const frontendIcons = [
   <SkillIcon Icon={SiTypescript} title={"TypeScript"} hoverColor={"#2D79C7"} />,
   <SkillIcon Icon={FaHtml5} title={"HTML"} hoverColor={"#E44D25"} />,
   <SkillIcon Icon={SiCsswizardry} title={"CSS"} hoverColor={"#264DE4"} />,
+  <SkillIcon Icon={SiTailwindcss} title={"Tailwind CSS"} hoverColor={"#38BDF8"} />,
   <SkillIcon Icon={FaSass} title={"SASS"} hoverColor={"#CD669A"} />,
   <SkillIcon Icon={TbBrandFramerMotion} title={"Framer motion"} hoverColor={"#E22CA2"} />,
   <SkillIcon Icon={SiAntdesign} title={"Ant Design"} hoverColor={"#F74F5E"} />,
