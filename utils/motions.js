@@ -36,6 +36,7 @@ export const title = {
   visible: {
     x: 0,
   },
+  delay: { transition: { delay: 0.5 } },
 };
 
 // About section

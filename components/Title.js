@@ -8,6 +8,7 @@ function Title({ children }) {
     <div className={styles.container}>
       <motion.h2
         initial={"hidden"}
+        animate={"delay"}
         whileInView={"visible"}
         variants={title}
         className={styles.title}
