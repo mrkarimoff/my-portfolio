@@ -88,7 +88,7 @@ function Contact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={styles.inp}
-            type="email"
+            type="text"
             placeholder="Your Email Or Telegram"
             required
           />
