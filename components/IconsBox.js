@@ -1,30 +1,21 @@
-import { IoLogoReact } from "react-icons/io5";
-import { DiMongodb } from "react-icons/di";
-import { FaNode } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { motion } from "framer-motion";
 import styles from "@/styles/IconsBox.module.css";
-import Image from "next/image";
 import { icon, iconNode } from "@/utils/motions";
+import { motion } from "framer-motion";
+import { FaNode } from "react-icons/fa";
+import { IoLogoReact } from "react-icons/io5";
+import { SiNextdotjs, SiPrisma, SiTypescript } from "react-icons/si";
 
 function IconsBox() {
   return (
     <div className={styles.iconContainer}>
       <motion.div whileHover={"hover"} variants={icon}>
-        <DiMongodb className={styles.iconSize} color="#00ED64" />
+        <SiPrisma className={styles.iconSize} color="#123A50" />
       </motion.div>
       <motion.div whileHover={"hover"} variants={icon}>
         <IoLogoReact className={styles.iconSize} color="#04D5FF" />
       </motion.div>
       <motion.div whileHover={"hover"} variants={icon}>
-        <Image
-          priority
-          className={styles.nextIcon}
-          src={"/next.png"}
-          width={60}
-          height={60}
-          alt="nextIcon"
-        />
+        <SiNextdotjs className={`${styles.iconSize} ${styles.nextIcon}`} color="#000" />
       </motion.div>
       <motion.div whileHover={"hover"} variants={iconNode}>
         <FaNode className={styles.iconSize} color="#00ED64" />

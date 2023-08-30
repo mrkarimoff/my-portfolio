@@ -26,7 +26,7 @@ function Home({ handleNavigationClick }) {
           I&apos;m a{" "}
           <span className={styles.typeEffect}>
             <Typewriter
-              words={["Web Developer.", "MERN Stack Developer.", "Freelancer."]}
+              words={["Web Developer.", "Full Stack Developer.", "Freelancer."]}
               loop={{}}
               cursor
               cursorStyle="|"

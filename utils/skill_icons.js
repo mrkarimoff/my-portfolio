@@ -1,25 +1,29 @@
 import SkillIcon from "@/components/SkillIcon";
-import { FaReact, FaHtml5, FaSass, FaNode } from "react-icons/fa";
 import { BsGit, BsGithub } from "react-icons/bs";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { IoLogoVercel } from "react-icons/io5";
+import { FaHtml5, FaNode, FaReact, FaSass } from "react-icons/fa";
 import {
+  SiAntdesign,
+  SiBootstrap,
+  SiChakraui,
   SiCsswizardry,
-  SiTailwindcss,
+  SiExpress,
+  SiFirebase,
   SiJavascript,
-  SiTypescript,
+  SiMongodb,
+  SiMui,
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiRedux,
   SiReduxsaga,
-  SiAntdesign,
-  SiMui,
-  SiChakraui,
-  SiBootstrap,
-  SiNextdotjs,
-  SiFirebase,
-  SiExpress,
   SiSocketdotio,
-  SiMongodb,
-  SiMysql,
+  SiTailwindcss,
+  SiTypescript,
+  SiDocker,
 } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const frontendIcons = [
   <SkillIcon Icon={FaReact} title={"React"} hoverColor={"#61DBFB"} />,
@@ -44,10 +48,15 @@ export const frontendIcons = [
 
 export const backendIcons = [
   <SkillIcon Icon={FaNode} title={"NodeJS"} hoverColor={"#67BB4A"} />,
+  <SkillIcon Icon={SiNextdotjs} title={"NextJS"} hoverColor={"#000"} />,
   <SkillIcon Icon={SiExpress} title={"ExpressJS"} hoverColor={"#828282"} />,
   <SkillIcon Icon={SiMongodb} title={"MongoDB"} hoverColor={"#46A438"} />,
   <SkillIcon Icon={SiJavascript} title={"JavaScript"} hoverColor={"#F7E018"} />,
   <SkillIcon Icon={SiTypescript} title={"TypeScript"} hoverColor={"#2D79C7"} />,
+  <SkillIcon Icon={SiPrisma} title={"Prisma"} hoverColor={"#123A50"} />,
   <SkillIcon Icon={SiSocketdotio} title={"SocketIo"} hoverColor={"#000"} />,
   <SkillIcon Icon={SiMysql} title={"MySQL"} hoverColor={"#4479A1"} />,
+  <SkillIcon Icon={SiPostgresql} title={"PostgreSQL"} hoverColor={"#2F6792"} />,
+  <SkillIcon Icon={IoLogoVercel} title={"Vercel"} hoverColor={"#000"} />,
+  <SkillIcon Icon={SiDocker} title={"Docker"} hoverColor={"#2597EE"} />,
 ];

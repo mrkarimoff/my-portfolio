@@ -1,23 +1,23 @@
 const projects = [
-  {
-    id: 32423413,
-    name: "My Collections",
-    img: "/projects/myCollections.png",
-    stack: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express.js",
-      "Socket.io",
-      "Redux+Saga+Toolkit",
-      "Ant Design UI",
-      "Jsonwebtoken",
-    ],
-    url: "https://mycollections-mirfayz.netlify.app",
-    code_base: "https://github.com/mrkarimoff/mycollection_frontend",
-    description:
-      "This application is for collectors! This is my first MERN stack application. I have learned and experimented many features and backend technologies in this application",
-  },
+  // {
+  //   id: 32423413,
+  //   name: "My Collections",
+  //   img: "/projects/myCollections.png",
+  //   stack: [
+  //     "React",
+  //     "Node.js",
+  //     "MongoDB",
+  //     "Express.js",
+  //     "Socket.io",
+  //     "Redux+Saga+Toolkit",
+  //     "Ant Design UI",
+  //     "Jsonwebtoken",
+  //   ],
+  //   url: "https://mycollections-mirfayz.netlify.app",
+  //   code_base: "https://github.com/mrkarimoff/mycollection_frontend",
+  //   description:
+  //     "This application is for collectors! This is my first MERN stack application. I have learned and experimented many features and backend technologies in this application",
+  // },
   {
     id: "1243546-3453dgd",
     name: "Sports Shopping Store",
@@ -27,6 +27,26 @@ const projects = [
     code_base: null,
     description:
       "This is an online store that I and my friends have been building for about 5 months. The client is from the Middle East. I was working on the frontend of the project, and the project is still in progress.",
+  },
+  {
+    id: 1243546,
+    name: "Pupmost",
+    img: "/projects/pupmost.png",
+    stack: [
+      "Next.js 13 and React",
+      "Next Auth",
+      "MongoDB Atlas",
+      "Redux Toolkit",
+      "React-hook-form",
+      "Resend for emails",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+    url: "https://www.pupmost.com",
+    code_base: null,
+    description:
+      "This is a web application that provides comprehensive information about various dog breeds!",
   },
   {
     id: "1475675675-hjkjh24",
@@ -68,24 +88,7 @@ const projects = [
     description:
       "This is a replica landing page of Gas Company! Reach me out if you need a website for your business.",
   },
-  {
-    id: 1243546,
-    name: "Agro Form",
-    img: "/projects/agro.jpg",
-    stack: [
-      "React",
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "React-hook-form",
-      "Axios",
-      "Github pages",
-      "Json Sever",
-    ],
-    url: "https://mrkarimoff.github.io/agro-form",
-    code_base: "https://github.com/mrkarimoff/agro-form",
-    description: "This is a form table application that I have built for my client from India.",
-  },
+
   {
     id: 15657753232,
     name: "Portfolio Website",
