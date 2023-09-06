@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is my portfolio website where I showcase my projects, skills, and experiences. The website is built using Next.js, Node.js, CSS, and JavaScript, and it is hosted on Vercel.
+This is my portfolio website where I showcase my projects, skills, and experiences. The website is built using Next.js, Node.js, CSS, and JavaScript, and it is hosted on Vercel!
 
 ## Table of Contents
 
