@@ -76,6 +76,28 @@ const projects = [
       "This is a template online store website that I built when I was learning Frontend development. The website is fully functional and responsive in modern design.",
   },
   {
+    id: "15657753232ujgclm34-fne",
+    name: "Network Canvas Documentation",
+    img: "/projects/docs-site.png",
+    stack: [
+      "Next.js 14",
+      "TypeScript",
+      "Zod",
+      "Remark/Rehype plugins",
+      "Framer Motion",
+      "Markdown MDX",
+      "Tailwind CSS and Radix UI components",
+      "Vercel for deployment",
+      "Algolia Search",
+      "Mendable AI",
+    ],
+    url: "https://documentation.networkcanvas.com",
+    code_base:
+      "https://github.com/complexdatacollective/network-canvas-monorepo/tree/main/apps/documentation",
+    description:
+      "This documentation site covers various aspects of Network Canvas, including detailed information about its primary applications and related products.",
+  },
+  {
     id: "15657753265300-988-gfhtrew",
     name: "Recruiting Platform",
     img: "/projects/recruit.jpg",
@@ -110,7 +132,6 @@ const projects = [
     description:
       "The Invoice Builder App is a web application developed using Next.js, React, and TypeScript. It allows users to easily create and print professional invoices.",
   },
-
   {
     id: 15657753232,
     name: "Portfolio Website",
@@ -128,25 +149,25 @@ const projects = [
     description:
       "This is a portfolio website I made for my first client from USA. ",
   },
-  {
-    id: 1475675675,
-    name: "The Weather App",
-    img: "/projects/weather.png",
-    stack: [
-      "React",
-      "Redux+Saga+Toolkit",
-      "TypeScript",
-      "HTML/CSS",
-      "Material UI",
-      "Victory chart",
-      "GeoLocation API",
-      "OpenWeather API",
-    ],
-    url: "https://mrkarimoff.github.io/weather-app-ts",
-    code_base: "https://github.com/mrkarimoff/weather-app-ts",
-    description:
-      "This is a weather app that I have built using OpenWeather API which provides hourly weather forecast",
-  },
+  // {
+  //   id: 1475675675,
+  //   name: "The Weather App",
+  //   img: "/projects/weather.png",
+  //   stack: [
+  //     "React",
+  //     "Redux+Saga+Toolkit",
+  //     "TypeScript",
+  //     "HTML/CSS",
+  //     "Material UI",
+  //     "Victory chart",
+  //     "GeoLocation API",
+  //     "OpenWeather API",
+  //   ],
+  //   url: "https://mrkarimoff.github.io/weather-app-ts",
+  //   code_base: "https://github.com/mrkarimoff/weather-app-ts",
+  //   description:
+  //     "This is a weather app that I have built using OpenWeather API which provides hourly weather forecast",
+  // },
 ];
 
 export default projects;
