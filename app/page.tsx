@@ -1,12 +1,12 @@
 import Header from '~/components/Header';
+import Main from '~/components/Main';
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Header />
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is the home page of my portfolio website.</p>
-    </div>
+      <Main />
+    </>
   );
 };
 

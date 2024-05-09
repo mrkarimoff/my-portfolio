@@ -1,21 +1,21 @@
-import styles from "@/styles/Tabs.module.css";
-import { tabContainer, tabContent } from "@/utils/motions";
-import { backendIcons, frontendIcons } from "@/utils/skill_icons";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import styles from '~/styles/Tabs.module.css';
+import { tabContainer, tabContent } from '~/utils/motions';
+import { backendIcons, frontendIcons } from '~/utils/skill_icons';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const tabs = [
-    { content: frontendIcons, label: "Frontend" },
-    { content: backendIcons, label: "Backend" },
+    { content: frontendIcons, label: 'Frontend' },
+    { content: backendIcons, label: 'Backend' },
   ];
 
   return (
     <motion.div
-      initial={"hidden"}
-      whileInView={"visible"}
+      initial={'hidden'}
+      whileInView={'visible'}
       viewport={{ once: true }}
       variants={tabContainer}
     >
@@ -24,7 +24,9 @@ export default function Tab() {
           {tabs.map((item, index) => (
             <li
               key={item.label}
-              className={index === selectedTab ? styles.selectedTab : styles.tab}
+              className={
+                index === selectedTab ? styles.selectedTab : styles.tab
+              }
               onClick={() => setSelectedTab(index)}
             >
               {item.label}
@@ -39,10 +41,10 @@ export default function Tab() {
         <AnimatePresence mode="wait">
           <motion.div
             className={styles.content}
-            key={selectedTab ? selectedTab.label : "empty"}
-            initial={"hidden"}
-            animate={"visible"}
-            exit={"exit"}
+            key={selectedTab ?? 'empty'}
+            initial={'hidden'}
+            animate={'visible'}
+            exit={'exit'}
             variants={tabContent}
           >
             {tabs[selectedTab].content.map((item, index) => (

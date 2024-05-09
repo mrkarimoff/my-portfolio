@@ -1,9 +1,9 @@
-import { container } from "@/utils/motions";
-import styles from "@/styles/Home.module.css";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { Typewriter } from "react-simple-typewriter";
-import IconsBox from "../IconsBox";
+import { container } from '~/utils/motions';
+import styles from '~/styles/Home.module.css';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { Typewriter } from 'react-simple-typewriter';
+import IconsBox from '../IconsBox';
 
 function Home({ handleNavigationClick }) {
   return (
@@ -13,20 +13,20 @@ function Home({ handleNavigationClick }) {
         data-swiper-parallax="95%"
         data-swiper-parallax-opacity={0.3}
       >
-        <Image className={styles.bgImage} alt="bg-image" src={"/bg.jpg"} fill />
+        <Image className={styles.bgImage} alt="bg-image" src={'/bg.jpg'} fill />
       </div>
       <motion.div
-        initial={"hidden"}
-        animate={"visible"}
+        initial={'hidden'}
+        animate={'visible'}
         variants={container}
         className={styles.content}
       >
         <motion.div className={styles.name}>Mirfayz Karimov</motion.div>
         <motion.h1 className={styles.occupation}>
-          I&apos;m a{" "}
+          I&apos;m a{' '}
           <span className={styles.typeEffect}>
             <Typewriter
-              words={["Web Developer.", "Full Stack Developer.", "Freelancer."]}
+              words={['Web Developer.', 'Full Stack Developer.', 'Freelancer.']}
               loop={{}}
               cursor
               cursorStyle="|"
@@ -37,7 +37,10 @@ function Home({ handleNavigationClick }) {
         </motion.h1>
         <IconsBox />
         <div data-swiper-parallax="-100" className={styles.btnContainer}>
-          <motion.button onClick={() => handleNavigationClick(4)} className={styles.contactMe}>
+          <motion.button
+            onClick={() => handleNavigationClick(4)}
+            className={styles.contactMe}
+          >
             CONTACT ME
           </motion.button>
         </div>

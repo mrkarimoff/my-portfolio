@@ -1,0 +1,7 @@
+enum ActionTypes {
+  TOGGLE_DRAWER = 'TOGGLE_DRAWER',
+  SET_ACTIVE_INDEX = 'SET_ACTIVE_INDEX',
+  SET_CURRENT_PROJECT = 'SET_CURRENT_PROJECT',
+}
+
+export default ActionTypes;

@@ -1,12 +1,11 @@
-import Header from "@/components/Header";
-import Main from "@/components/Main";
-import Overlay from "@/components/Overlay";
-import Head from "next/head";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import Header from '@/components/Header';
+import Main from '@/components/Main';
+import Overlay from '@/components/Overlay';
+import Head from 'next/head';
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 export default function Home() {
-  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
       <Head>
@@ -18,9 +17,6 @@ export default function Home() {
 
       <Header />
       <Main setOpenModal={setOpenModal} />
-      <AnimatePresence>
-        {openModal && <Overlay close={() => setOpenModal(false)} />}
-      </AnimatePresence>
     </div>
   );
 }

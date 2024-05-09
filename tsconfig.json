@@ -29,7 +29,9 @@
     ".eslintrc.cjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "utils/constants.ts",
+    "components/Header.js"
   ],
   "exclude": ["node_modules"]
 }

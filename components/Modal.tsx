@@ -1,11 +1,11 @@
-import styles from "@/styles/Modal.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { CgClose, CgCodeSlash } from "react-icons/cg";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
-import { RxOpenInNewWindow } from "react-icons/rx";
-import { motion } from "framer-motion";
-import { content, imageVariants, modal, text } from "@/utils/motions";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CgClose, CgCodeSlash } from 'react-icons/cg';
+import { IoMdArrowDroprightCircle } from 'react-icons/io';
+import { RxOpenInNewWindow } from 'react-icons/rx';
+import styles from '~/styles/Modal.module.css';
+import { content, imageVariants, modal, text } from '~/utils/motions';
 
 function Modal({ data, close }) {
   const { img, name, id, stack, description, url, code_base } = data;
@@ -13,13 +13,28 @@ function Modal({ data, close }) {
   const rightStack = stack.slice(Math.ceil(stack.length / 2));
 
   return (
-    <motion.div variants={modal} onClick={(e) => e.stopPropagation()} className={styles.modal}>
+    <motion.div
+      variants={modal}
+      onClick={(e) => e.stopPropagation()}
+      className={styles.modal}
+    >
       <button onClick={close} className={styles.closeBtn}>
         <CgClose className={styles.closeIcon} />
       </button>
 
-      <motion.a variants={imageVariants} className={styles.imgContainer} target="_blank" href={url}>
-        <Image sizes="400" fill src={img} className={styles.modalImg} alt={name + id} />
+      <motion.a
+        variants={imageVariants}
+        className={styles.imgContainer}
+        target="_blank"
+        href={url}
+      >
+        <Image
+          sizes="400"
+          fill
+          src={img}
+          className={styles.modalImg}
+          alt={name + id}
+        />
       </motion.a>
 
       <motion.div variants={content} className={styles.content}>
@@ -70,7 +85,11 @@ function Modal({ data, close }) {
             <RxOpenInNewWindow className={styles.sourceIcon} />
           </Link>
           {code_base && (
-            <Link href={code_base} target="_blank" className={`${styles.sourceBtn} ${styles.code}`}>
+            <Link
+              href={code_base}
+              target="_blank"
+              className={`${styles.sourceBtn} ${styles.code}`}
+            >
               <span>Code</span>
               <CgCodeSlash className={styles.sourceIcon} />
             </Link>

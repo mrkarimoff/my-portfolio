@@ -1,18 +1,18 @@
-import Card from "@/components/Card";
-import Title from "@/components/Title";
-import { updateState } from "@/redux/reducers/general.reducer";
-import styles from "@/styles/Portfolio.module.css";
-import projects from "@/utils/constants";
-import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Card from '@/components/Card';
+import Title from '@/components/Title';
+import { updateState } from '@/redux/reducers/general.reducer';
+import styles from '~/styles/Portfolio.module.css';
+import projects from '~/utils/constants';
+import { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function Portfolio({ setOpenModal }) {
   const dispatch = useDispatch();
@@ -29,9 +29,9 @@ function Portfolio({ setOpenModal }) {
 
       <Swiper
         ref={swiperRef}
-        effect={"coverflow"}
+        effect={'coverflow'}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
@@ -55,7 +55,7 @@ function Portfolio({ setOpenModal }) {
           <SwiperSlide
             onClick={() => {
               setOpenModal(true);
-              dispatch(updateState({ state: "currentCard", setState: item }));
+              dispatch(updateState({ state: 'currentCard', setState: item }));
             }}
             key={item.id}
             className={`${styles.swiperSlide} ${activeIndex === index && styles.activeSlide}`}
