@@ -5,9 +5,15 @@ import { CgClose, CgCodeSlash } from 'react-icons/cg';
 import { IoMdArrowDroprightCircle } from 'react-icons/io';
 import { RxOpenInNewWindow } from 'react-icons/rx';
 import styles from '~/styles/Modal.module.css';
+import type { Project } from '~/utils/constants';
 import { content, imageVariants, modal, text } from '~/utils/motions';
 
-function Modal({ data, close }) {
+type ModalProps = {
+  close: () => void;
+  data: Project;
+};
+
+function Modal({ data, close }: ModalProps) {
   const { img, name, id, stack, description, url, code_base } = data;
   const leftStack = stack.slice(0, Math.ceil(stack.length / 2));
   const rightStack = stack.slice(Math.ceil(stack.length / 2));

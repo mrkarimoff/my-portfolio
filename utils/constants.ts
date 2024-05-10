@@ -1,14 +1,17 @@
 import { v4 as uuidv4 } from 'uuid';
+import { z } from 'zod';
 
-export type Project = {
-  id: string;
-  name: string;
-  img: string;
-  stack: string[];
-  url: string;
-  code_base: string | null;
-  description: string;
-};
+export const projectSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  img: z.string(),
+  stack: z.array(z.string()),
+  url: z.string(),
+  code_base: z.string().nullable(),
+  description: z.string(),
+});
+
+export type Project = z.infer<typeof projectSchema>;
 
 const projects: Project[] = [
   // {

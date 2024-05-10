@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import styles from '~/styles/Title.module.css';
 import { title } from '~/utils/motions';
 

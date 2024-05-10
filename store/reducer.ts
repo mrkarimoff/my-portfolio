@@ -1,5 +1,5 @@
 import ActionTypes from './actionTypes';
-import type { Project } from '~/utils/constants';
+import { projectSchema, type Project } from '~/utils/constants';
 
 type AppState = {
   isOpenDrawer: boolean;
@@ -36,10 +36,12 @@ export function reducer(
       return { ...state, activeIndex: action.payload };
 
     case ActionTypes.SET_CURRENT_PROJECT:
-      if (action.payload === undefined || typeof action.payload !== 'string')
+      const result = projectSchema.safeParse(action.payload);
+
+      if (action.payload === undefined || result.success === false)
         throw new Error('Invalid action payload!');
 
-      return { ...state, currentProject: action.payload };
+      return { ...state, currentProject: result.data };
     default:
       throw new Error('Invalid action type');
   }

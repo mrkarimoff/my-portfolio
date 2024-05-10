@@ -19,8 +19,9 @@
     "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^9.1.2",
     "sib-api-v3-sdk": "^8.5.0",
-    "swiper": "^9.2.0",
-    "uuid": "^9.0.1"
+    "swiper": "^11.1.1",
+    "uuid": "^9.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10",

@@ -1,14 +1,12 @@
 'use client';
 
-import styles from '~/styles/Main.module.css';
 import { AnimatePresence } from 'framer-motion';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { IoArrowUpOutline } from 'react-icons/io5';
-import { Keyboard, Mousewheel, Parallax, Scrollbar } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Keyboard, Mousewheel, Parallax, Scrollbar } from 'swiper/modules';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import Overlay from '~/components/Overlay';
+import styles from '~/styles/Main.module.css';
 import Context from '~/utils/context';
 import About from './Sections/About';
 import Contact from './Sections/Contact';
@@ -17,9 +15,12 @@ import Portfolio from './Sections/Portfolio';
 import Skills from './Sections/Skills';
 import Sidebar from './Sidebar';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 function Main() {
   const [openModal, setOpenModal] = useState(false);
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperRef>(null);
 
   const context = useContext(Context);
 
@@ -30,9 +31,10 @@ function Main() {
   const {
     activeIndex,
     isOpenDrawer,
-    currentCard,
+    currentProject,
     toggleDrawer,
     setActiveIndex,
+    setCurrentProject,
   } = context;
 
   useEffect(() => {
@@ -50,10 +52,10 @@ function Main() {
   };
 
   return (
-    <>
+    <main>
       <AnimatePresence>
         {openModal && (
-          <Overlay project={currentCard} close={() => setOpenModal(false)} />
+          <Overlay project={currentProject} close={() => setOpenModal(false)} />
         )}
       </AnimatePresence>
 
@@ -87,7 +89,10 @@ function Main() {
             <Skills />
           </SwiperSlide>
           <SwiperSlide className={styles.section}>
-            <Portfolio setOpenModal={setOpenModal} />
+            <Portfolio
+              setOpenModal={setOpenModal}
+              setCurrentProject={setCurrentProject}
+            />
           </SwiperSlide>
           <SwiperSlide className={styles.section}>
             <Contact />
@@ -100,7 +105,7 @@ function Main() {
           <IoArrowUpOutline size={28} />
         </a>
       </div>
-    </>
+    </main>
   );
 }
 

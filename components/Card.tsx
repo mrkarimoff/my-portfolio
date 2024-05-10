@@ -2,8 +2,9 @@ import styles from '~/styles/Card.module.css';
 import { card } from '~/utils/motions';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import type { Project } from '~/utils/constants';
 
-function Card({ data }) {
+function Card({ data }: { data: Project }) {
   return (
     <>
       <motion.div

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '~/styles/About.module.css';
-import Title from '@/components/Title';
+import Title from '~/components/Title';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { mainImg, resumeBtn, textAnim } from '~/utils/motions';

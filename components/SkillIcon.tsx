@@ -1,5 +1,5 @@
 import styles from '~/styles/SkillIcon.module.css';
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 
 type SkillIconProps = {
   hoverColor: string;

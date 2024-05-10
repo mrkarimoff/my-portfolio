@@ -1,14 +1,17 @@
-import Title from '@/components/Title';
+'use client';
+
+import Title from '~/components/Title';
 import styles from '~/styles/Contact.module.css';
 import { emoji } from '~/utils/motions';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { type FormEvent, useState } from 'react';
 import { AiOutlineSend } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import domain from '~/domain';
 
 function Contact() {
   const router = useRouter();
@@ -16,11 +19,11 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const data = { name, email, message };
-      await axios.post('https://www.mirfayz.uz/api/email', data);
+      await axios.post(`${domain}/api/email`, data);
       toast.success('Message sent successfully!', {
         position: 'top-right',
         autoClose: 2500,
@@ -96,8 +99,8 @@ function Contact() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={styles.textarea}
-            cols="30"
-            rows="10"
+            cols={30}
+            rows={10}
             placeholder="Your Message"
             required
           />

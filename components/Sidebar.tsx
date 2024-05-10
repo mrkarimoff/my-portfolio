@@ -1,10 +1,12 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import styles from '~/styles/Sidebar.module.css';
 import { sidebar } from '~/utils/motions';
 import Navigations from './Navigations';
 import SocialLinks from './SocialLinks';
+import { useRouter } from 'next/navigation';
 
 type SidebarProps = {
   activeIndex: number;
@@ -31,8 +33,8 @@ function Sidebar({
       <div className={styles.profile}>
         <Image
           placeholder="blur"
-          blurDataURL={'/me.png'}
-          src={'/me.png'}
+          blurDataURL={'/photo1.png'}
+          src={'/photo1.png'}
           alt="profile"
           className={styles.img}
           width={130}

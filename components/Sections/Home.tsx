@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { Typewriter } from 'react-simple-typewriter';
 import IconsBox from '../IconsBox';
 
-function Home({ handleNavigationClick }) {
+type HomeProps = {
+  handleNavigationClick: (index: number) => void;
+};
+
+function Home({ handleNavigationClick }: HomeProps) {
   return (
     <div className={styles.container}>
       <div
@@ -27,7 +31,7 @@ function Home({ handleNavigationClick }) {
           <span className={styles.typeEffect}>
             <Typewriter
               words={['Web Developer.', 'Full Stack Developer.', 'Freelancer.']}
-              loop={{}}
+              loop={true}
               cursor
               cursorStyle="|"
               typeSpeed={90}

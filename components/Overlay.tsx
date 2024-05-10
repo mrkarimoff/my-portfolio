@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import Modal from '~/components/Modal';
 import styles from '~/styles/Overlay.module.css';
+import type { Project } from '~/utils/constants';
 import { overlay } from '~/utils/motions';
 
 type OverlayProps = {
   close: () => void;
-  project: string;
+  project: Project | null;
 };
 
 function Overlay({ close, project }: OverlayProps) {

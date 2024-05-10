@@ -1,12 +1,13 @@
 import { createContext } from 'react';
+import type { Project } from './constants';
 
 type ContextType = {
   isOpenDrawer: boolean;
   activeIndex: number;
-  currentCard: string;
+  currentProject: Project | null;
   toggleDrawer: (value?: boolean) => void;
   setActiveIndex: (value: number) => void;
-  setCurrentCard: (value: string) => void;
+  setCurrentProject: (value: Project) => void;
 };
 
 const Context = createContext<ContextType | null>(null);
