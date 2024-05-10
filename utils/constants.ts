@@ -1,6 +1,16 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const projects = [
+export type Project = {
+  id: string;
+  name: string;
+  img: string;
+  stack: string[];
+  url: string;
+  code_base: string | null;
+  description: string;
+};
+
+const projects: Project[] = [
   // {
   //   id: uuidv4(),
   //   name: "My Collections",
@@ -171,7 +181,5 @@ const projects = [
   //     "This is a weather app that I have built using OpenWeather API which provides hourly weather forecast",
   // },
 ];
-
-export type Project = (typeof projects)[0];
 
 export default projects;

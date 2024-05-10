@@ -1,12 +1,16 @@
 import ActionTypes from './actionTypes';
 import type { Project } from '~/utils/constants';
 
-type AppActions = {
-  type: ActionTypes;
-  payload?: number | boolean | Project;
+type AppState = {
+  isOpenDrawer: boolean;
+  activeIndex: number;
+  currentProject: Project | null;
 };
 
-type AppState = typeof initialState;
+type AppActions = {
+  type: ActionTypes;
+  payload?: AppState[keyof AppState];
+};
 
 export const initialState = {
   isOpenDrawer: false,
