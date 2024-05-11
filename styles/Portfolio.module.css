@@ -41,8 +41,8 @@
 
 .swiperSlide.activeSlide::after,
 .swiperSlide.activeSlide::before {
-  width: calc(100% - 3.5px);
-  height: calc(100% - 3.5px);
+  width: calc(100% - 4.5px);
+  height: calc(100% - 4.5px);
   border-color: var(--main-color);
 }
 
