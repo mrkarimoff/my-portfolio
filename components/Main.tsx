@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { IoArrowUpOutline } from 'react-icons/io5';
 import { Keyboard, Mousewheel, Parallax, Scrollbar } from 'swiper/modules';
@@ -59,7 +60,7 @@ function Main() {
         )}
       </AnimatePresence>
 
-      <div id="myElement">
+      <div>
         <Sidebar
           handleNavigationClick={handleNavigationClick}
           activeIndex={activeIndex}
@@ -98,12 +99,13 @@ function Main() {
             <Contact />
           </SwiperSlide>
         </Swiper>
-        <a
+        <Link
+          href="#"
           onClick={() => handleNavigationClick(0)}
           className={activeIndex ? styles.arrowBox : styles.arrowBoxInvisible}
         >
           <IoArrowUpOutline size={28} />
-        </a>
+        </Link>
       </div>
     </main>
   );

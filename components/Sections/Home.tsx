@@ -1,9 +1,9 @@
-import { container } from '~/utils/motions';
-import styles from '~/styles/Home.module.css';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Typewriter } from 'react-simple-typewriter';
-import IconsBox from '../IconsBox';
+import IconsBox from '~/components/IconsBox';
+import styles from '~/styles/Home.module.css';
+import { container } from '~/utils/motions';
 
 type HomeProps = {
   handleNavigationClick: (index: number) => void;

@@ -1,9 +1,9 @@
-import styles from '~/styles/IconsBox.module.css';
-import { icon, iconNode } from '~/utils/motions';
 import { motion } from 'framer-motion';
 import { FaNode } from 'react-icons/fa';
 import { IoLogoReact } from 'react-icons/io5';
 import { SiNextdotjs, SiPrisma, SiTypescript } from 'react-icons/si';
+import styles from '~/styles/IconsBox.module.css';
+import { icon, iconNode } from '~/utils/motions';
 
 function IconsBox() {
   return (

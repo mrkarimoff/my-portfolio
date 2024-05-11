@@ -1,8 +1,3 @@
-import Card from '~/components/Card';
-import Title from '~/components/Title';
-
-import styles from '~/styles/Portfolio.module.css';
-import projects, { Project } from '~/utils/constants';
 import { Dispatch, SetStateAction, useRef, useState } from 'react';
 import {
   Autoplay,
@@ -10,13 +5,15 @@ import {
   Navigation,
   Pagination,
 } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import Card from '~/components/Card';
+import Title from '~/components/Title';
+import styles from '~/styles/Portfolio.module.css';
+import projects, { Project } from '~/utils/constants';
 
-import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 type PortfolioProps = {
   setOpenModal: Dispatch<SetStateAction<boolean>>;
@@ -24,7 +21,7 @@ type PortfolioProps = {
 };
 
 function Portfolio({ setOpenModal, setCurrentProject }: PortfolioProps) {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (

@@ -1,7 +1,6 @@
-import React from 'react';
-import styles from '~/styles/Skills.module.css';
-import Title from '~/components/Title';
 import Tabs from '~/components/Tabs';
+import Title from '~/components/Title';
+import styles from '~/styles/Skills.module.css';
 
 function Skills() {
   return (

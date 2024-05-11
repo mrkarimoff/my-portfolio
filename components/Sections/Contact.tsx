@@ -1,8 +1,3 @@
-'use client';
-
-import Title from '~/components/Title';
-import styles from '~/styles/Contact.module.css';
-import { emoji } from '~/utils/motions';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -11,7 +6,10 @@ import { AiOutlineSend } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Title from '~/components/Title';
 import domain from '~/domain';
+import styles from '~/styles/Contact.module.css';
+import { emoji } from '~/utils/motions';
 
 function Contact() {
   const router = useRouter();
