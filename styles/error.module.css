@@ -53,8 +53,8 @@
 }
 
 .gif {
-  width: 100%;
-  object-fit: contain;
+  border-radius: 20px;
+  object-fit: cover;
   margin-bottom: 40px;
 }
 
@@ -80,5 +80,12 @@
 
   .gif {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gif {
+    width: 100%;
+    object-fit: contain;
   }
 }

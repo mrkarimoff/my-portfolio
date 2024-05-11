@@ -9,8 +9,8 @@ export default function NotFound() {
       <Image
         className={styles.gif}
         alt="error-gif"
+        width={600}
         height={400}
-        width={300}
         src={'/error.gif'}
       />
       <button className={styles.btn}>

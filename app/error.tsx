@@ -22,8 +22,8 @@ export default function Error({
       <Image
         className={styles.gif}
         alt="error-gif"
+        width={600}
         height={400}
-        width={300}
         src={'/error.gif'}
       />
       <div className={styles.btnWrapper}>
