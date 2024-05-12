@@ -13,9 +13,9 @@ export default function NotFound() {
         height={400}
         src={'/error.gif'}
       />
-      <button className={styles.btn}>
-        <Link href="/">Return Home</Link>
-      </button>
+      <Link className={styles.btn} href="/">
+        Return Home
+      </Link>
     </div>
   );
 }

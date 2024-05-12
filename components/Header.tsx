@@ -26,8 +26,7 @@ function Header() {
         className={styles.headshot}
       >
         <Image
-          placeholder="blur"
-          blurDataURL={'/photo1.png'}
+          priority
           src={'/photo1.png'}
           alt="head-shot"
           width={70}

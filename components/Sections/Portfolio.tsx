@@ -1,11 +1,11 @@
-import { Dispatch, SetStateAction, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import {
   Autoplay,
   EffectCoverflow,
   Navigation,
   Pagination,
 } from 'swiper/modules';
-import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '~/components/Card';
 import Title from '~/components/Title';
 import styles from '~/styles/Portfolio.module.css';
@@ -21,7 +21,6 @@ type PortfolioProps = {
 };
 
 function Portfolio({ setOpenModal, setCurrentProject }: PortfolioProps) {
-  const swiperRef = useRef<SwiperRef>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -29,7 +28,6 @@ function Portfolio({ setOpenModal, setCurrentProject }: PortfolioProps) {
       <Title>Portfolio</Title>
 
       <Swiper
-        ref={swiperRef}
         effect={'coverflow'}
         centeredSlides={true}
         slidesPerView={'auto'}

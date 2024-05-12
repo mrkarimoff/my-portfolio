@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Title from '~/components/Title';
 import styles from '~/styles/About.module.css';
 import { aboutContainer, mainImg, resumeBtn, textAnim } from '~/utils/motions';
@@ -14,7 +16,7 @@ function About() {
   return (
     <motion.div
       initial={'hidden'}
-      whileInView={'visible'}
+      animate={'visible'}
       variants={aboutContainer}
       className={styles.container}
     >
@@ -41,21 +43,52 @@ function About() {
           </motion.p>
         </div>
         <motion.div
+          className={styles.right}
           initial={'hidden'}
-          whileHover={'hover'}
-          whileTap={'tap'}
           whileInView={'visible'}
           viewport={{ once: true }}
           variants={mainImg}
-          className={styles.right}
         >
-          <Image
-            sizes="300"
-            className={styles.img}
-            src={'/me2.jpg'}
-            fill
-            alt="mainImg"
-          />
+          <Swiper
+            pagination={{ clickable: true }}
+            slidesPerView={1}
+            modules={[Pagination]}
+            className={styles.aboutSwiper}
+          >
+            <SwiperSlide className={styles.main}>
+              <div className={styles.imgWrapper}>
+                <Image
+                  sizes="300"
+                  className={styles.img}
+                  src={'/photo2.jpg'}
+                  fill
+                  alt="mainPhoto"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className={styles.main}>
+              <div className={styles.imgWrapper}>
+                <Image
+                  sizes="300"
+                  className={styles.img}
+                  src={'/me2.jpg'}
+                  fill
+                  alt="secondPhoto"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className={styles.main}>
+              <div className={styles.imgWrapper}>
+                <Image
+                  sizes="300"
+                  className={styles.img}
+                  src={'/photo3.jpg'}
+                  fill
+                  alt="thirdPhoto"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </motion.div>
       </div>
 

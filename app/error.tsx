@@ -27,12 +27,12 @@ export default function Error({
         src={'/error.gif'}
       />
       <div className={styles.btnWrapper}>
-        <button className={styles.btn} onClick={() => reset()}>
+        <Link className={styles.btn} href="#" onClick={() => reset()}>
           Try again
-        </button>
-        <button className={styles.btn}>
-          <Link href="/">Return Home</Link>
-        </button>
+        </Link>
+        <Link className={styles.btn} href="/">
+          Return Home
+        </Link>
       </div>
     </div>
   );

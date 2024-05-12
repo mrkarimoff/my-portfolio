@@ -30,8 +30,6 @@ function Sidebar({
     >
       <div className={styles.profile}>
         <Image
-          placeholder="blur"
-          blurDataURL={'/photo1.png'}
           src={'/photo1.png'}
           alt="profile"
           className={styles.img}
