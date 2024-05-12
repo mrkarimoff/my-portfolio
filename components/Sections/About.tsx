@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Title from '~/components/Title';
 import styles from '~/styles/About.module.css';
-import { mainImg, resumeBtn, textAnim } from '~/utils/motions';
+import { aboutContainer, mainImg, resumeBtn, textAnim } from '~/utils/motions';
 
 function About() {
   const downloadResume = () =>
@@ -12,7 +12,12 @@ function About() {
     );
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={'hidden'}
+      whileInView={'visible'}
+      variants={aboutContainer}
+      className={styles.container}
+    >
       <Title>About Me</Title>
 
       <div className={styles.content}>
@@ -74,7 +79,7 @@ function About() {
           Resume
         </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

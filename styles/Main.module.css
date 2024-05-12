@@ -8,7 +8,7 @@
 
 .arrowBox {
   all: unset;
-  z-index: 100;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,12 +1,12 @@
 // Sidebar
 export const sidebar = {
-  hidden: { x: "-100%", opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.8, type: "tween" } },
+  hidden: { x: '-100%', opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, type: 'tween' } },
 };
 
 // Home Section
 export const container = {
-  hidden: { y: "100%" },
+  hidden: { y: '100%' },
   visible: {
     y: 0,
     transition: {
@@ -18,21 +18,25 @@ export const container = {
 
 // Icons
 export const icon = {
-  hover: { rotate: [0, 90, -90, 0], transition: { duration: 2 }, cursor: "pointer" },
+  hover: {
+    rotate: [0, 90, -90, 0],
+    transition: { duration: 2 },
+    cursor: 'pointer',
+  },
 };
 
 export const iconNode = {
   hover: {
     rotate: [0, 10, -10, 0],
     scale: 1.5,
-    transition: { duration: 1, type: "keyframes", ease: "easeInOut" },
-    cursor: "pointer",
+    transition: { duration: 1, type: 'keyframes', ease: 'easeInOut' },
+    cursor: 'pointer',
   },
 };
 
 // Section title
 export const title = {
-  hidden: { x: "-100%" },
+  hidden: { x: '-100%' },
   visible: {
     x: 0,
   },
@@ -45,10 +49,21 @@ export const mainImg = {
   visible: {
     rotate: 0,
     scale: 1,
-    transition: { delay: 0.5, type: "spring", stiffness: 260, damping: 20 },
+    transition: { delay: 0.5, type: 'spring', stiffness: 260, damping: 20 },
   },
   hover: { scale: 1.1 },
   tap: { scale: 0.9 },
+};
+
+export const aboutContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+      duration: 1,
+    },
+  },
 };
 
 export const textAnim = {
@@ -88,12 +103,15 @@ export const overlay = {
 
 export const modal = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.5, delayChildren: 0.2 } },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.5, delayChildren: 0.2 },
+  },
 };
 
 export const imageVariants = {
-  hidden: { opacity: 0, y: "-10vh" },
-  visible: { opacity: 1, y: "0vh" },
+  hidden: { opacity: 0, y: '-10vh' },
+  visible: { opacity: 1, y: '0vh' },
 };
 
 export const content = {
@@ -102,7 +120,7 @@ export const content = {
 };
 
 export const text = {
-  hidden: { opacity: 0, x: "10%" },
+  hidden: { opacity: 0, x: '10%' },
   visible: { opacity: 1, x: 0 },
 };
 
@@ -112,6 +130,6 @@ export const emoji = {
   visible: {
     scale: 1.5,
     rotate: [30, -30, 90, 0],
-    transition: { type: "keyframes", duration: 0.5, delay: 1 },
+    transition: { type: 'keyframes', duration: 0.5, delay: 1 },
   },
 };
