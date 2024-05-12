@@ -25,8 +25,8 @@
 }
 
 .aboutSwiper {
-  width: 330px;
-  height: 330px;
+  width: 350px;
+  height: 350px;
   box-shadow: var(--main-color) 0px 20px 30px -10px;
   border-radius: 10px;
 }
@@ -89,8 +89,8 @@
   }
 
   .aboutSwiper {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
     box-shadow: var(--main-color) -4px 9px 25px -6px;
   }
 
