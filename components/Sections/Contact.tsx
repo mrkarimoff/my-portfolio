@@ -1,15 +1,25 @@
-import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { type FormEvent, useState } from 'react';
 import { AiOutlineSend } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, type ToastPosition } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import sendEmail from '~/app/_actions/email';
 import Title from '~/components/Title';
-import domain from '~/domain';
 import styles from '~/styles/Contact.module.css';
 import { emoji } from '~/utils/motions';
+
+const toastOptions = {
+  position: 'top-right' as ToastPosition,
+  autoClose: 2500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: 'dark',
+};
 
 function Contact() {
   const router = useRouter();
@@ -21,22 +31,16 @@ function Contact() {
     e.preventDefault();
     try {
       const data = { name, email, message };
-      await axios.post(`${domain}/api/email`, data);
-      toast.success('Message sent successfully!', {
-        position: 'top-right',
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
-      });
+      const result = await sendEmail(data);
+      if (!result.data) throw new Error('Failed to send email!');
+      toast.success(result.data, toastOptions);
       setName('');
       setEmail('');
       setMessage('');
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
+      toast.error('Failed to send email. Please try again!', toastOptions);
     }
   };
 

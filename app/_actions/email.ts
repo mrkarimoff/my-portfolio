@@ -1,9 +1,6 @@
 'use server';
 
-import dotenv from 'dotenv';
-import Sib from 'sib-api-v3-sdk';
-
-dotenv.config();
+import { Resend } from 'resend';
 
 type Data = {
   name: string;
@@ -12,38 +9,26 @@ type Data = {
 };
 
 export default async function sendEmail({ name, email, message }: Data) {
-  const client = Sib.ApiClient.instance;
-  const apiKey = client.authentications['api-key'];
-  apiKey.apiKey = process.env.SENDGRID_API_KEY;
-
-  const tranEmailApi = new Sib.TransactionalEmailsApi();
-
-  const sender = {
-    email: 'mirfayzkarimoff@gmail.com',
-    name,
-  };
-
-  const receivers = [
-    {
-      email: 'mrkarimoff99@gmail.com',
-    },
-  ];
-
   try {
-    await tranEmailApi.sendTransacEmail({
-      sender,
-      to: receivers,
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const result = await resend.emails.send({
+      from: 'mirfayzkarimoff@gmail.com',
+      to: 'mrkarimoff99@gmail.com',
       subject: "Let's talk about opportunities!",
-      textContent: `
-    You have a message from ${name}
-    Sender: ${email}
-    Message: ${message}
-    `,
+      html: `<div>
+     <h1>You have a message from ${name}</h1>
+     <p><strong>Sender:</strong> ${email}</p>
+     <p><strong>Message:</strong> ${message}</p>
+    </div>`,
     });
 
-    return { error: null, message: 'Email sent successfully!' };
+    if (!result.data) throw new Error(result.error?.message);
+
+    return { error: null, data: 'Email sent successfully!' };
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
-    return { error, message: 'Failed to send email!' };
+    return { error, data: null };
   }
 }

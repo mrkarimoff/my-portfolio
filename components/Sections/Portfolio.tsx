@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { type Dispatch, type SetStateAction, useState } from 'react';
 import {
   Autoplay,
   EffectCoverflow,
@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '~/components/Card';
 import Title from '~/components/Title';
 import styles from '~/styles/Portfolio.module.css';
-import projects, { Project } from '~/utils/constants';
+import projects, { type Project } from '~/utils/constants';
 
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';

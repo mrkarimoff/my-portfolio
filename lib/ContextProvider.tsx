@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useReducer } from 'react';
+import { type ReactNode, useReducer } from 'react';
 import ActionTypes from '~/store/actionTypes';
 import { initialState, reducer } from '~/store/reducer';
 import type { Project } from '~/utils/constants';

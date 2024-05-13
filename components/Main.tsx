@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { IoArrowUpOutline } from 'react-icons/io5';
 import { Keyboard, Mousewheel, Parallax, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
+import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
 import Overlay from '~/components/Overlay';
 import styles from '~/styles/Main.module.css';
 import Context from '~/utils/context';
