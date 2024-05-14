@@ -32,7 +32,7 @@ function Contact() {
       const data = { name, email, message };
       const result = await sendEmail(data);
       if (!result.data) throw new Error('Failed to send email!');
-      toast.success(result.data, toastOptions);
+      toast.success('Email sent successfully!', toastOptions);
       setName('');
       setEmail('');
       setMessage('');
