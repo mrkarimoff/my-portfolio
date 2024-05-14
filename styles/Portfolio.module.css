@@ -5,35 +5,36 @@
 .swiperSlide {
   background-position: center;
   background-size: cover;
-  width: 420px;
-  height: 450px;
+  width: 420px !important;
+  height: 450px !important;
   position: relative;
   transition: ease-out 0.5s;
   -webkit-transition: ease-out 0.5s;
   -moz-transition: ease-out 0.5s;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .swiperSlide::after,
 .swiperSlide::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   transition: 2s;
 }
 
 .swiperSlide::after {
-  top: -2px;
-  left: -2px;
+  top: 1px;
+  left: 1px;
   border-top: 2.5px solid transparent;
   border-left: 2.5px solid transparent;
   border-radius: 6px;
 }
 
 .swiperSlide::before {
-  bottom: -2px;
-  right: -2px;
+  bottom: 1px;
+  right: 1px;
   border-bottom: 2.5px solid transparent;
   border-right: 2.5px solid transparent;
   border-radius: 5px;
@@ -41,8 +42,8 @@
 
 .swiperSlide.activeSlide::after,
 .swiperSlide.activeSlide::before {
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
+  width: calc(100% - 4.5px);
+  height: calc(100% - 4.5px);
   border-color: var(--main-color);
 }
 
@@ -60,21 +61,21 @@
 
 @media screen and (max-width: 550px) {
   .swiperSlide {
-    width: 390px;
-    height: 420px;
+    width: 390px !important;
+    height: 420px !important;
   }
 }
 
 @media screen and (max-width: 420px) {
   .swiperSlide {
-    width: 350px;
-    height: 410px;
+    width: 350px !important;
+    height: 410px !important;
   }
 }
 
 @media screen and (max-width: 370px) {
   .swiperSlide {
-    width: 300px;
-    height: 350px;
+    width: 300px !important;
+    height: 350px !important;
   }
 }
