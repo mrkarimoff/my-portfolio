@@ -13,11 +13,11 @@ export default async function sendEmail({ name, email, message }: Data) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const result = await resend.emails.send({
-      from: 'mirfayzkarimoff@gmail.com',
+      from: 'portfolio@mirfayz.uz',
       to: 'mrkarimoff99@gmail.com',
       subject: "Let's talk about opportunities!",
       html: `<div>
-     <h1>You have a message from ${name}</h1>
+     <h1>You have a message from -> ${name}</h1>
      <p><strong>Sender:</strong> ${email}</p>
      <p><strong>Message:</strong> ${message}</p>
     </div>`,
