@@ -22,10 +22,12 @@ You can see the live demo of the website at [mirfayz.uz](https://www.mirfayz.uz/
 
 ## Technologies Used
 
-- Next.js
+- Next.js 14
+- React 18
 - Node.js
-- JavaScript
-- Redux Toolkit
+- Zod
+- Resend
+- TypeScript + Eslint
 - Framer Motion
 - Swiper.js
 - CSS
