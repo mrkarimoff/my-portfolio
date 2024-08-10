@@ -9,7 +9,7 @@ import { aboutContainer, mainImg, resumeBtn, textAnim } from '~/utils/motions';
 function About() {
   const downloadResume = () =>
     window.open(
-      'https://drive.google.com/file/d/1kpuUdOeeaoqyylU81WrJ-CWz9kDS6LW5/view',
+      'https://drive.google.com/file/d/1LiXcUdSkOZ-y16nr7uK42kAXDysoHXCh/view?usp=sharing',
       '_blank',
     );
 
