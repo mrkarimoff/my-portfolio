@@ -72,6 +72,28 @@ const projects: Project[] = [
   },
   {
     id: uuidv4(),
+    name: 'Fresco',
+    img: '/projects/fresco.png',
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Prisma + PostgreSQL',
+      'Redux + Context',
+      'SCSS',
+      'TailwindCSS',
+      'Framer Motion',
+      'Vercel',
+      'Radix UI',
+      'Zod',
+      'Docker',
+    ],
+    url: 'https://fresco-sandbox.networkcanvas.com',
+    code_base: 'https://github.com/complexdatacollective/Fresco',
+    description:
+      'Fresco is an exciting new project that brings Network Canvas interviews to the web browser.',
+  },
+  {
+    id: uuidv4(),
     name: 'Online School platform',
     img: '/projects/school.jpg',
     stack: ['React', 'Redux+Saga+Toolkit', 'HTML/CSS', 'PHP', 'PostgreSQL'],
@@ -147,23 +169,23 @@ const projects: Project[] = [
     description:
       'The Invoice Builder App is a web application developed using Next.js, React, and TypeScript. It allows users to easily create and print professional invoices.',
   },
-  {
-    id: uuidv4(),
-    name: 'Portfolio Website',
-    img: '/projects/william.png',
-    stack: [
-      'HTML5',
-      'CSS3',
-      'SASS',
-      'JavaScript',
-      'Redux Toolkit',
-      'Github Pages',
-    ],
-    url: 'http://willmullins.net',
-    code_base: null,
-    description:
-      'This is a portfolio website I made for my first client from USA. ',
-  },
+  // {
+  //   id: uuidv4(),
+  //   name: 'Portfolio Website',
+  //   img: '/projects/william.png',
+  //   stack: [
+  //     'HTML5',
+  //     'CSS3',
+  //     'SASS',
+  //     'JavaScript',
+  //     'Redux Toolkit',
+  //     'Github Pages',
+  //   ],
+  //   url: 'http://willmullins.net',
+  //   code_base: null,
+  //   description:
+  //     'This is a portfolio website I made for my first client from USA. ',
+  // },
   // {
   //   id: uuidv4(),
   //   name: "The Weather App",

@@ -32,9 +32,9 @@ function About() {
             className={styles.text}
           >
             Hi, I&apos;m Mirfayz Karimov, a Full stack developer with a focus on
-            Next.js/React development. I love creating web applications that
-            solve everyday problems, and I&apos;m always curious to learn more
-            when it comes to new technologies and creative coding.
+            Next.js/React + Python development. I love creating web applications
+            that solve everyday problems, and I&apos;m always curious to learn
+            more when it comes to new technologies and creative coding.
             <br />
             <br /> When I&apos;m not coding, you can usually find me watching
             movies, reading psychological and personal growth books, or

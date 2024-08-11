@@ -22,6 +22,9 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiDocker,
+  SiStorybook,
+  SiFastapi,
+  SiPython,
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 
@@ -90,6 +93,12 @@ export const frontendIcons = [
     Icon={TbBrandFramerMotion}
     key={'Framer motion'}
     title={'Framer motion'}
+    hoverColor={'#5A86F2'}
+  />,
+  <SkillIcon
+    Icon={SiStorybook}
+    key={'Storybook'}
+    title={'Storybook'}
     hoverColor={'#E22CA2'}
   />,
   <SkillIcon
@@ -167,6 +176,18 @@ export const backendIcons = [
     key={'TypeScript'}
     title={'TypeScript'}
     hoverColor={'#2D79C7'}
+  />,
+  <SkillIcon
+    Icon={SiPython}
+    key={'Python'}
+    title={'Python'}
+    hoverColor={'#3573A6'}
+  />,
+  <SkillIcon
+    Icon={SiFastapi}
+    key={'FastAPI'}
+    title={'FastAPI'}
+    hoverColor={'#089486'}
   />,
   <SkillIcon
     Icon={SiPrisma}

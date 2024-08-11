@@ -24,7 +24,7 @@
   border: 1px solid #2d79c7;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 615px) {
   .iconContainer {
     flex-wrap: wrap;
     justify-content: center;

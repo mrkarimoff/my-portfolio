@@ -42,7 +42,7 @@ function Portfolio({ setOpenModal, setCurrentProject }: PortfolioProps) {
           clickable: true,
         }}
         autoplay={{
-          delay: 3200,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         navigation={true}
